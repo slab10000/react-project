@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+
 function ListGroup() {
 	var items = ["Madrid", "Paris", "Rome", "Tokyo"];
 	//items = [];
@@ -28,6 +30,9 @@ function ListGroup() {
 		items.length === 0 && <p>No items found</p>;
 	} // Returns false or the value of the paragraph
 
+	/* Event Handler in react */
+	const handleClick = (event: MouseEvent) => console.log(event);
+
 	return (
 		<>
 			<h1>This is my title</h1>
@@ -37,11 +42,7 @@ function ListGroup() {
 			{items.length === 0 && <p>No items found</p> /* Example 2 */}
 			<ul className="list-group">
 				{items.map((item, index) => (
-					<li
-						className="list-group-item"
-						key={item}
-						onClick={(event) => console.log(event)}
-					>
+					<li className="list-group-item" key={item} onClick={handleClick}>
 						{item}
 					</li>
 				))}

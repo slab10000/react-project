@@ -36,8 +36,12 @@ function ListGroup() {
 			{items.length === 0 ? <p>No items found</p> : null /* Example 1 */}
 			{items.length === 0 && <p>No items found</p> /* Example 2 */}
 			<ul className="list-group">
-				{items.map((item) => (
-					<li className="list-group-item" key={item}>
+				{items.map((item, index) => (
+					<li
+						className="list-group-item"
+						key={item}
+						onClick={() => console.log(item, index)}
+					>
 						{item}
 					</li>
 				))}

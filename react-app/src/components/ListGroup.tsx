@@ -1,6 +1,6 @@
 function ListGroup() {
 	var items = ["Madrid", "Paris", "Rome", "Tokyo"];
-	items = [];
+	//items = [];
 
 	/* We can use this logic to render it dynamically but repeats code
     
@@ -37,7 +37,9 @@ function ListGroup() {
 			{items.length === 0 && <p>No items found</p> /* Example 2 */}
 			<ul className="list-group">
 				{items.map((item) => (
-					<li key={item}>{item}</li>
+					<li className="list-group-item" key={item}>
+						{item}
+					</li>
 				))}
 			</ul>
 		</>

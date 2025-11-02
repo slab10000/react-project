@@ -1,11 +1,11 @@
 //rafce <- to create the file automatically
 
 interface Props {
-	text: string;
+	children: string;
 }
 
-const Alert = ({ text }: Props) => {
-	return <div className="alert alert-success">{text}</div>;
+const Alert = ({ children }: Props) => {
+	return <div className="alert alert-success">{children}</div>;
 };
 
 export default Alert;

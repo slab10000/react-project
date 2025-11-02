@@ -5,7 +5,7 @@ import Alert from "./components/Alert";
 function App() {
 	return (
 		<div>
-			<Alert text="Hello World" />
+			<Alert>"hello world as children"</Alert>
 		</div>
 	);
 }

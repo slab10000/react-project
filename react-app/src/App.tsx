@@ -1,20 +1,11 @@
 // We have to import our new component
-import ListGroup from "./components/ListGroup";
+
+import Alert from "./components/Alert";
 
 function App() {
-	let items = ["Madrid", "Paris", "Rome", "Tokyo"];
-
-	const hanldeSelectItem = (item: string) => {
-		console.log(item);
-	};
-
 	return (
 		<div>
-			<ListGroup
-				items={items}
-				heading="Cities"
-				onSelectItem={hanldeSelectItem}
-			/>
+			<Alert text="Hello World" />
 		</div>
 	);
 }
